@@ -1,5 +1,10 @@
 # Porting notes
-Notes from process of porting Route Admin Panel which is ROS1 package to ROS2.
+
+At Husarion we have developed an open-sourced GUI for managing mobile robot destinations. It is web browser based and allows user to set single destination or set of destinations as a sequnece or loop. Everything with user friendly and intuitive graphic interface and out of the box experience without a single line of code. The project is named Route Admin Panel, or in short version RAP. It was initially created for ROS1 and successfuly tested with Kinetic and Melodic.
+
+Increasing [efforts](https://metrics.ros.org/rosdistro_rosdistro.html) of ROS community on development on ROS2 as well questions from our users convinced us provide dedicated ROS2 image for ROSbots. It comes with ROS Dashing with all desktop tools. The communication middleware of our choice is Cyclone DDD as we consider is as most stable and effective. Moreover, what is important form a developer perspective, we find its documentation as complete and comprehensive. Images are prepared for ARM architecture with supported devices `RPi 3`, `RPi 4` and `ASUS TinkerBoard` as well as for Intel architecture with supported device `UpBoard`.
+
+We decided that the default software, also beeing the showcase for ROSbot capabilites, will be RAP, thus it nedded to be ported to ROS2. Below are experiences we gathered and challengen we faced during the process.
 
 ## Architecture
 
