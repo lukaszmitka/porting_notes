@@ -135,3 +135,9 @@ When we started the process of porting RAP to ROS2, rclnodejs did not have suppo
 As defined in actions design, their support is already implemented in [`rcl` library](https://github.com/ros2/rcl). To add actions support in rclnodejs it is required to add appropriate language bindings between `JavaScript` in `rclnodejs` and `C` in `rcl`. Also, according classes to process actions needs to be implemented. 
 
 Last thing is to provide data type generator for actions. Every ROS message, service or action is defined in `.msg`, `.srv` or `.action` accordingly. Each of them can also be defined with use of universal `.idl` file. Both methods are not directly usable in `Node.js`, thus they need to be converted to according `JavaScript` classes prior to usage. Furthermore, actions must be converted during install time on user machine to porvide support for user defined actions.
+
+## Summary
+
+Porting the project from ROS1 to ROS2 was quite challneging due to variety od tools and components used. It was also as much valuable experience, that's why we decided to share it in this article.
+
+We have discussed usage of `image_transport` plugin, parameter declaration and intergation of `Node.js` library with ROS2 interface. If any of these issues are interesting for you, please let us know in rthe comment below.
