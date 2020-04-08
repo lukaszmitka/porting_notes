@@ -1,19 +1,23 @@
-# Porting notes
+# Porting a project from ROS1 to ROS2 - our experience
 
-At Husarion we have developed an open-sourced GUI for managing mobile robot destinations. 
-It is web browser based and allows user to set single destination or set of destinations as a sequnece or loop. 
+At Husarion we have developed an open-sourced GUI for managing autonomous mobile robot destinations. 
+It is a web browser based and allows user to set single destination or set of destinations as a sequnece or loop. 
 Everything with user friendly and intuitive graphic interface and out of the box experience without a single line of code. 
-The project is named Route Admin Panel, or in short version RAP. 
+The project is named [Route Admin Panel](https://husarion.com/software/route-admin-panel/), or in short version RAP. 
 It was initially created for ROS1 and successfuly tested with Kinetic and Melodic.
 
+RAP is a pre-installed web user interface on 
+[ROSbot 2.0](https://husarion.com/manuals/rosbot-manual/) 
+providing a very handy way to start using it even with no coding. 
 Increasing [efforts](https://metrics.ros.org/rosdistro_rosdistro.html) of ROS community on development on ROS2 
 as well as questions from our users convinced us provide dedicated [ROS2 image for ROSbot](https://husarion.com/downloads/). 
 It comes with ROS Dashing with all desktop tools. 
-The communication middleware of our choice is Cyclone DDD as we consider is as most stable and effective. 
+The communication middleware of our choice is Cyclone DDS as we consider it as most stable and effective. 
 Moreover, what is important form a developer perspective, we find its documentation as complete and comprehensive. 
 Images are prepared for ARM architecture with supported device `ASUS TinkerBoard` as well as for Intel architecture with supported device `UpBoard`.
 
-We decided that the default software, also beeing the showcase for ROSbot capabilites, will be RAP, thus it nedded to be ported to ROS2. 
+We decided that the default software working out-of-the-box, also beeing the showcase for ROSbot capabilites, 
+will be RAP, thus it needed to be ported to ROS2. 
 Below are experiences we gathered and challengen we faced during the process.
 
 ## Architecture
@@ -195,3 +199,10 @@ It was also as much valuable experience, that's why we decided to share it in th
 
 We have discussed usage of `image_transport` plugin, parameter declaration and intergation of `Node.js` library with ROS2 interface. 
 If any of these issues are interesting for you, please let us know in rthe comment below.
+
+RAP is an open source project and code for ROS1 and ROS2 is available as separate branches 
+[on the GitHub](https://github.com/husarion/route_admin_panel). 
+
+I hope description of our experiences gathered during porting open source project from ROS1 to ROS2 will be helpful for ROS community.
+
+All the best!
