@@ -8,13 +8,20 @@ It was initially created for ROS1 and successfuly tested with Kinetic and Melodi
 
 RAP is a pre-installed web user interface on 
 [ROSbot 2.0](https://husarion.com/manuals/rosbot-manual/) 
-providing a very handy way to start using it even with no coding. 
-Increasing [efforts](https://metrics.ros.org/rosdistro_rosdistro.html) of ROS community on development on ROS2 
-as well as questions from our users convinced us provide dedicated [ROS2 image for ROSbot](https://husarion.com/downloads/). 
+providing a very handy way to start using the robot with no coding involved. 
+
+Altough it was developed using ROSbot, you can use RAP with:
+
+- Gazebo simulator
+- AWS RoboMaker (https://husarion.com/tutorials/aws-robomaker/rosbot-aws-robomaker-example-applications/)
+- Install it on any other mobile robot
+
+Increasing [efforts](https://metrics.ros.org/rosdistro_rosdistro.html) of ROS community on ROS2 development
+as well as questions from our users convinced us to provide a dedicated [ROS2 image for ROSbot](https://husarion.com/downloads/). 
 It comes with ROS Dashing with all desktop tools. 
 The communication middleware of our choice is Cyclone DDS as we consider it as most stable and effective. 
-Moreover, what is important form a developer perspective, we find its documentation as complete and comprehensive. 
-Images are prepared for ARM architecture with supported device `ASUS TinkerBoard` as well as for Intel architecture with supported device `UpBoard`.
+Moreover, what is important from a developer perspective, we find its documentation complete and comprehensive. 
+Images are prepared for ARM architecture with ASUS TinkerBoard as a supported device and Intel architecture with UpBoard as a supported device.
 
 We decided that the default software working out-of-the-box, also beeing the showcase for ROSbot capabilites, 
 will be RAP, thus it needed to be ported to ROS2. 
